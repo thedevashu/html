@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>validate</title>
+</head>
+<style>
+    .errormsg
+    {
+        visibility: hidden;
+        color: crimson;
+        font-weight: bolder;
+    }
+</style>
+<script>
+    function validate() {
+        var name = document.forms.form1.name.value
+        var age =document.forms["form1"]["age"].value
+       
+        if(name.trim() =="")
+       { 
+            document.getElementsByClassName("errormsg")[0].style.visibility="visible"
+           return false
+        }
+        else
+             document.getElementsByClassName("errormsg")[0].style.visibility="hidden"
+         if(age<10)
+         {
+            alert("incorrect age") 
+            document.getElementsByClassName("errormsg")[1].style.visibility = 'visible'
+            return false;
+            }
+            else
+            {
+                document.getElementsByClassName("dhar").innerHTML=`NAV: ${name} VAI: ${age}`
+
+                return true
+            }
+
+            
+                
+            
+                
+    }
+   
+</script>
+<body>
+    <p id="dhar">as</p>
+    <script>
+         document.getElementById('dhar').innerHTML="ghara";
+    </script>
+    
+
+
+    <p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+
+    
+    <form name="form1" onsubmit=" return validate()">
+        <input type="text" name="name">
+        <br>
+        <p class="errormsg">Pls enter name</p>
+        <input type="number" name="age">
+        <p class="errormsg">AGE SHOULD BE ABOVE 10</p>
+        <input type="submit" value="action">
+    </form>
+    
+</body>
+</html>

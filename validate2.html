@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>validate</title>
+</head>
+<script>
+    function validate() {
+        document.forms["form1"].action="more.html"
+        return true
+    }
+</script>
+<body>
+    <form name="form1" onsubmit=" return validate()">
+        <input type="text" name="name">
+        <input type="number" name="age">
+        <input type="submit" value="action">
+    </form>
+</body>
+</html>

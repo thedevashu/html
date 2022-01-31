@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div id="first" >
+
+    </div>
+    
+    <p id="para"></p>
+    <button onclick="doSomthing()">See text</button>
+</body>
+<script>
+    var v=1;
+    function doSomthing(){
+    if(v==1){
+    document.getElementById("first").innerText="Hello from iner text"
+    document.getElementById("para").innerHTML="<b>In Inner Html</b>"
+    v=0
+}
+    else{
+        document.getElementById("first").innerHTML=""
+        document.getElementById("para").innerHTML=""
+        v= 1;
+    }
+    
+    }
+    
+</script>
+</html>

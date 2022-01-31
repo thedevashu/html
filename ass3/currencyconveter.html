@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .myDiv {
+          border: 5px outset red;
+          background-color: lightblue;
+          text-align: center;
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+        </style>
+
+</head>
+<body>
+    <div class="myDiv">
+    <span>Enter your currency:</span>
+    <input type="number" id ="ip">
+    <select name="curr" id="mn1">
+        <option value="76.01">&#x20B9;</option>
+        <option value="0.89">&#128;</option>
+        <option value="1">$</option>
+        <option value="0.75">&#163;</option>
+    
+    </select>
+<br> <br>
+<span>Conversion:</span>
+
+<output id="op">__</output>
+<select name="curr" id="mn2" >
+    <option value="76.01">&#x20B9;</option>
+    <option value="0.89">&#128;</option>
+    <option value="1">$</option>
+    <option value="0.75">&#163;</option>
+</select>
+<button onclick="convert()">Convert</button>
+</div>
+</body>
+<script>
+    function convert() {
+       var curr=document.getElementById("ip").value;
+       var ipcurr=document.getElementById("mn1").value;
+       var opcurr=document.getElementById("mn2").value;
+       ipcurr =parseFloat(ipcurr);
+       opcurr =parseFloat(opcurr);
+
+       var idl=curr/ipcurr
+       var conversion=idl*opcurr
+      
+       document.getElementById("op").value=conversion.toFixed(3);
+       
+
+    }
+</script>
+</html>

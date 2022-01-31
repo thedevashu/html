@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>HTML VALIDATION</title>
+    <script>
+        function kam()
+        {
+            
+            
+            var name=document.forms.form1.name.value
+            var age =document.forms["form1"]["age"].value
+            console.log(name,age)
+            if(age<10)
+                alert("vay chukla ahe")
+            else
+            {
+                document.forms.form1.action="table.html"
+                document.forms["form1"].submit()
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <input type="text" name="name">
+        <input type="number" name="age">
+
+        <input type="button" value="action1" onclick="kam()">
+        <!-- <button onclick="kam()">Action1</button> -->
+    </form>
+</body>
+</html>

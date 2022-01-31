@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    Enter Name<input type="text" id="t1" />
+    <p id="t1"></p>
+    <p id="p1"></p>
+    <button id="b1">click me</button>
+    <script>
+        $(document).ready(function(){
+          
+          $("#b1").click(function(){
+              
+              let s = $("#t1").val();
+              console.log(s)
+              //$("p").text(s.toUpperCase())
+             $("#p1").text(s.toUpperCase())
+             //$(".para").text(s.toUpperCase())
+            });
+          $("#b2").click(()=>{ })
+          });
+    </script>
+</body>
+</html>
