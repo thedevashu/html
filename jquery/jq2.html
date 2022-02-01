@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   
+    <title>Document</title>
+</head>
+<body>
+    <select name="op" id="s1"></select>
+    <button id="b1">Click me</button>
+    <p id="p1"></p>
+</body>
+<script text="js">
+    $(document).ready(function(){
+        for(var i=0;i<10;i++){
+            $("#s1").append(new Option(i,i+2))
+        }
+        
+        $("#b1").click(function(){
+            $("#p1").html("")
+            var x = $("#s1").val()
+            console.log(x);
+            for(var k=0;k<x;k++){
+                $("#p1").append("<h1>RAM RAM!</h1>")
+            }
+        })
+
+       
+    })
+</script>
+</html>

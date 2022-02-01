@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <title>Document</title>
+</head>
+<script>
+
+    $(document).ready(()=>{
+        console.log($("div").data("name"))
+        console.log($("div").data("role"),"\n",$("div").data("active"));
+        $("p").data("test",{what:"paragraph",by:"jquery"})
+        $("span").first().text($("p").data("test").what)
+        $("span").last().text($("p").data("test").by)
+    })
+</script>
+<body>
+    <p>This is <span></span> written by <span></span></p>
+    <div data-name="Ashutosh" data-role="Sigma" data-active="Radio-Active"></div>
+</body>
+</html>

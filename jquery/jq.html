@@ -7,22 +7,18 @@
 </head>
 <body>
     Enter Name<input type="text" id="t1" />
-    <p id="t1"></p>
+    <p ></p>
     <p id="p1"></p>
     <button id="b1">click me</button>
     <script>
-        $(document).ready(function(){
-          
-          $("#b1").click(function(){
-              
-              let s = $("#t1").val();
-              console.log(s)
-              //$("p").text(s.toUpperCase())
-             $("#p1").text(s.toUpperCase())
-             //$(".para").text(s.toUpperCase())
-            });
-          $("#b2").click(()=>{ })
-          });
+       $(document).ready(function(){
+           $("#b1").click(function(){
+               console.log("you clicked")
+               var val = $("#t1").val()
+
+               $("#p1").text(val.toUpperCase())
+           })
+       })
     </script>
 </body>
 </html>
