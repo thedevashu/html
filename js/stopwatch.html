@@ -9,7 +9,15 @@
 <body>
     <script>
         function start() {
+            var x = 0
+            timerid = setInterval(() => {
 
+                x = x + 1;
+                document.getElementById("p1").innerHTML = x
+            }, 10);
+        }
+        function stop() {
+            clearInterval(timerid)
         }
     </script>
     <p id="p1"></p>

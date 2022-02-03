@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <title>Document</title>
+</head>
+<script>
+    $(document).ready(() => {
+        $("#s").click(() => {
+            var x = 0;
+            id = setInterval(() => {
+                console.log(id);
+                $("#time").html("")
+                $("h1").append(`${x++}`)
+            }, 50);
+        })
+        $("#stp").click(() => {
+            clearInterval(id)
+        })
+    })
+</script>
+
+<body>
+    <h1 id="time"></h1>
+    <button id="s">start</button>
+    <button id="stp">stop</button>
+</body>
+
+</html>
